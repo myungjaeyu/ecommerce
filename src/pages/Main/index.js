@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-import './Main.scss'
+
+import './index.scss'
+
+import MainContent from './internal/Section/MainContent'
 
 export default class extends Component {
     render() {
         return (
             <div className='Main'>
-                <h1>Main pages</h1>
+
+                <MainContent />
+
             </div>
         )
     }
