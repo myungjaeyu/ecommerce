@@ -1,0 +1,49 @@
+.SelectQuantity {
+
+    display: flex;
+    align-items: stretch;
+
+    input,
+    button {
+
+        width: 35px;
+
+        text-align: center;
+        font-size: 1rem;
+
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 1px 0;
+
+        outline: none;
+
+    }
+
+    input {
+        padding: 0.8rem;
+    }
+
+    button {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.5rem;
+
+        background-color: transparent;
+        border-width: 1px 0;
+
+        cursor: pointer;
+
+        &:first-child {
+            border-left-width: 1px;
+        }
+
+        &:last-child {
+            border-right-width: 1px;
+        }
+
+    }
+
+}
