@@ -1,3 +1,58 @@
 .List {
 
+    .ListHeader {
+
+        text-align: center;
+        font-weight: normal;
+
+        letter-spacing: 3px;
+
+        padding: 2rem 0;
+
+    }
+
+    .ListContentMenu__wrapper {
+
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        border: 1px solid #ccc;
+
+        margin-bottom: 3rem;
+
+    }
+
+    .ListContentItem {
+
+        border: 1px solid transparent;
+
+        transition: all .3s ease;
+
+        &:hover {
+            border-color: #ccc;
+
+            box-shadow: 0 2px 3px #ccc;
+        }
+
+        a {
+            color: #232323;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h5 {
+            letter-spacing: 2px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: .5rem;
+        }
+
+    }
+
 }
