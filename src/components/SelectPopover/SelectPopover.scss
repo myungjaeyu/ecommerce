@@ -22,6 +22,9 @@
     }
 
     .SelectPopover__popover {
+
+        animation: fadeIn .5s ease 0s 1 normal backwards;
+
         width: 270px;
 
         position: absolute;
@@ -48,5 +51,50 @@
         }
 
     }
+
+    @keyframes fadeIn {
+
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+
+    }
+
+    @keyframes fadeInDown {
+
+        0% {
+            bottom: -100%;
+        }
+
+        100% {
+            bottom: 0;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        position: static;
+
+        width: 100%;
+
+        .SelectPopover__popover {
+
+            position: fixed;
+
+            width: 100%;
+
+            bottom: 0;
+            left: 0;
+            top: auto;
+
+            animation: fadeInDown .2s ease 0s 1 normal backwards;
+
+        }
+
+    } 
 
 }
