@@ -1,0 +1,52 @@
+.SelectPopover {
+
+    position: relative;
+    width: 150px;
+
+    button {
+        width: 100%;
+
+        font-size: .8rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        padding: 1.27rem 0;
+
+        background-color: transparent;
+
+        border: none;
+        border-left: 1px solid #ccc;
+
+        outline: none;
+        cursor: pointer;
+    }
+
+    .SelectPopover__popover {
+        width: 270px;
+
+        position: absolute;
+
+        top: 70px;
+        left: -150px;
+
+        color: #232323;
+        text-align: center;
+
+        background-color: #f5f5f5;
+        border: 1px solid #f5f5f5;
+
+        box-shadow: 0 3px 5px #ccc;
+
+        button {
+
+            border: none;
+
+            &:active {
+                background-color: #fff;
+            }
+
+        }
+
+    }
+
+}
