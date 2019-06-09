@@ -11,6 +11,13 @@
 
         // border: 1px solid red;
 
+        a {
+            color : #232323;
+
+            text-decoration: none;
+
+        }
+
         nav {
 
             margin-left: -60px;
@@ -48,11 +55,6 @@
 
         .NavigationBar__right-icon {
             font-size: 1.3rem;
-
-            a {
-                color : #232323;
-            }
-
         }
 
     }

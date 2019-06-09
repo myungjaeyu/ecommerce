@@ -14,7 +14,9 @@ export default () => (
         <div className='erer__container'>
 
             <div>
-                Title
+                <NavLink exact to='/'>
+                    Title
+                </NavLink>
             </div>
 
             <nav>
