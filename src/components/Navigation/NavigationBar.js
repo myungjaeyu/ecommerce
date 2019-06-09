@@ -9,20 +9,24 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import NavigationItems from './NavigationItems'
 
 export default () => (
-    <header className='NavigationBar erer__container'>
+    <header className='NavigationBar'>
 
-        <div>
-            Title
-        </div>
+        <div className='erer__container'>
 
-        <nav>
-            <NavigationItems />
-        </nav>
+            <div>
+                Title
+            </div>
 
-        <div className='NavigationBar__right-icon'>
-            <NavLink exact to='#'>
-                <FontAwesomeIcon icon={ faShoppingCart } />
-            </NavLink>
+            <nav>
+                <NavigationItems />
+            </nav>
+
+            <div className='NavigationBar__right-icon'>
+                <NavLink exact to='#'>
+                    <FontAwesomeIcon icon={ faShoppingCart } />
+                </NavLink>
+            </div>
+
         </div>
 
     </header>
