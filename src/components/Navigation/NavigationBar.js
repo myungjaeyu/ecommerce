@@ -3,9 +3,9 @@ import React from 'react'
 import './NavigationBar.scss'
 
 import { NavLink } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faAlignJustify } from '@fortawesome/free-solid-svg-icons'
 
+import ButtonIcon from '../../components/ButtonIcon/ButtonIcon'
 import NavigationItems from './NavigationItems'
 
 export default () => (
@@ -13,20 +13,35 @@ export default () => (
 
         <div className='erer__container'>
 
-            <div>
+            <div className='NavigationBar__auth NavigationBar__desktop'>
+
+                <NavLink exact to='#'>Log in</NavLink>
+                <NavLink exact to='#'>Sign up</NavLink>
+
+            </div>
+
+            <div className='NavigationBar__nav'>
+
+                <div className='NavigationBar__mobile'>
+                    <ButtonIcon icon={ faAlignJustify } />
+                </div>
+
                 <NavLink exact to='/'>
                     Title
                 </NavLink>
-            </div>
 
-            <nav>
-                <NavigationItems />
-            </nav>
+                <nav>
 
-            <div className='NavigationBar__right-icon'>
-                <NavLink exact to='#'>
-                    <FontAwesomeIcon icon={ faShoppingCart } />
-                </NavLink>
+                    <div className='NavigationBar__desktop'>
+
+                        <NavigationItems />
+
+                    </div>
+
+                </nav>
+
+                <ButtonIcon icon={ faShoppingCart } />
+
             </div>
 
         </div>

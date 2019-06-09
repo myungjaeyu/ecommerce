@@ -1,48 +1,68 @@
 .NavigationBar {
 
-
-    // border: 1px solid blue;
-
     .erer__container {
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        // border: 1px solid red;
 
         a {
             color : #232323;
-
             text-decoration: none;
+        }
+
+        .NavigationBar__auth {
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            width: 100%;
+
+            margin-top: 10px;
+
+            a {
+
+                font-size: .8rem;
+                letter-spacing: 2px;
+
+                margin-left: 20px;
+                
+            }
 
         }
 
-        nav {
+        .NavigationBar__nav {
 
-            margin-left: -60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            ul {
-            
-                margin: 0;
-                padding: 0;
-            
-                list-style: none;
-            
-                text-align: center;
-            
-                li {
-                    display: inline-block;
+            width: 100%;
 
-                    margin: 20px;
+            nav {
 
-                    a {
-                        text-decoration: none;
+                margin-left: -60px;
 
-                        color: #000;
+                ul {
+                
+                    margin: 0;
+                    padding: 0;
+                
+                    list-style: none;
+                
+                    text-align: center;
+                
+                    li {
+                        display: inline-block;
 
-                        &:hover {
-                            color: #848484;
+                        margin: 20px;
+
+                        a {
+                            text-decoration: none;
+
+                            color: #000;
+
+                            &:hover {
+                                color: #848484;
+                            }
+
                         }
 
                     }
@@ -53,8 +73,21 @@
 
         }
 
-        .NavigationBar__right-icon {
-            font-size: 1.3rem;
+
+        @media (max-width: 768px) {
+
+            .NavigationBar__desktop {
+                display: none;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+
+            .NavigationBar__mobile {
+                display: none;
+            }
+
         }
 
     }
