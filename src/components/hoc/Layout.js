@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import './Layout.scss'
+
+import NavigationBar from '../Navigation/NavigationBar'
 
 export default class extends Component {
 
@@ -9,11 +11,17 @@ export default class extends Component {
         const { children } = this.props
 
         return (
-            <div className='Layout'>
+            <Fragment>
 
-                { children }
+                <NavigationBar />
 
-            </div>
+                <div className='Layout'>
+
+                    { children }
+
+                </div>
+
+            </Fragment>
         )
     }
 }
