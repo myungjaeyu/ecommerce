@@ -2,10 +2,14 @@ import React from 'react'
 
 import './NavigationBar.scss'
 
+import { NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 import NavigationItems from './NavigationItems'
 
 export default () => (
-    <header className='NavigationBar'>
+    <header className='NavigationBar erer__container'>
 
         <div>
             Title
@@ -15,8 +19,10 @@ export default () => (
             <NavigationItems />
         </nav>
 
-        <div>
-            Test
+        <div className='NavigationBar__right-icon'>
+            <NavLink exact to='#'>
+                <FontAwesomeIcon icon={ faShoppingCart } />
+            </NavLink>
         </div>
 
     </header>
