@@ -1,3 +1,37 @@
 .Item {
 
+    img {
+        width: 100%;
+    }
+
+    .ItemForm {
+
+        h1 {
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
+
+        .ItemForm__price {
+            font-size: 1.4rem;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        form {
+
+            p,
+            .Item__btn {
+                margin-top: 2rem;
+            }
+
+            p {
+                margin-bottom: 0.5rem;
+            }
+
+        }
+
+    }
+
 }

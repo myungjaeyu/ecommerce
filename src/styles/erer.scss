@@ -17,7 +17,15 @@
 
         box-sizing: border-box;
     }
-    
+
+    .erer__col-5 {
+        width: 41.66%;
+    }
+
+    .erer__col-7 {
+        width: 58.33%;
+    }
+
     .erer__col-12 {
         width: 100%;
         padding: 0 1rem;
@@ -28,6 +36,8 @@
     @media (max-width: 768px) {
 
         .erer__col-3,
+        .erer__col-5,
+        .erer__col-7,
         .erer__col-12 {
 
             width: 100%;
