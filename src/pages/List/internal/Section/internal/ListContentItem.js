@@ -2,10 +2,10 @@ import React from 'react'
 
 import { NavLink } from 'react-router-dom'
 
-export default ({ image, name, price }) => (
+export default ({ id, image, name, price }) => (
     <div className='ListContentItem erer__col-3'>
 
-        <NavLink exact to='#'>
+        <NavLink exact to={ '/item/' + id }>
 
             <img src={ image } className='erer__w-100' />
 
