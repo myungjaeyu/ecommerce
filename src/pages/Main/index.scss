@@ -21,6 +21,17 @@
 
     }
 
+    .MainSubContent {
+        text-align: center;
+
+        padding: 5rem 0;
+
+        h5 {
+            letter-spacing: 2px;
+        }
+
+    }
+
     .MainFeatures {
         padding: 5rem 0;
 
@@ -44,6 +55,12 @@
 
                 padding: 2rem;
                 margin-bottom: 2rem;
+
+            }
+
+            @media (max-width: 768px) {
+
+                margin-top: 0;
 
             }
 
