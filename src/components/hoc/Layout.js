@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react'
 import './Layout.scss'
 
 import NavigationBar from '../Navigation/NavigationBar'
+import Footer from '../Footer/Footer'
 
 export default class extends Component {
 
@@ -20,6 +21,8 @@ export default class extends Component {
                     { children }
 
                 </div>
+
+                <Footer />
 
             </Fragment>
         )
