@@ -1,3 +1,31 @@
+.erer__container {
+    padding: 0 5rem;
+}
+
+.erer__row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .erer__col-3 {
+        width: 33.33%;
+        padding: 0 1rem;
+
+        box-sizing: border-box;
+    }
+    
+    .erer__col-12 {
+        width: 100%;
+        padding: 0 1rem;
+
+        box-sizing: border-box;
+    }
+
+}
+
+.erer__mt-3 {
+    margin-top: 3rem;
+}
+
 .erer__btn {
     text-decoration: none;
 
@@ -7,10 +35,21 @@
     font-weight: bold;
 
     &.erer__btn-black {
-        border: 1px solid #232323;
+        border: 2px solid #232323;
 
         color: #ccc;
         background-color: #232323;
+
+        &:hover,
+        &:active {
+            color: #232323;
+            background-color: transparent;
+        }
+
     }
 
+}
+
+.erer__text-center {
+    text-align: center !important;
 }

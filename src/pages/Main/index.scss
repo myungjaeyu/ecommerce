@@ -21,4 +21,26 @@
 
     }
 
+    .MainFeatures {
+        padding: 5rem 0;
+
+        border-bottom: 1px solid #ccc;
+
+        .MainFeature {
+
+            text-align: center;
+
+            padding: 3rem 0;
+            margin-top: 2rem;
+
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #f7f7f7;
+            }
+
+        }
+
+    }
+
 }
