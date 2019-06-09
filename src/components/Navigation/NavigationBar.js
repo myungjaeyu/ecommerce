@@ -9,7 +9,7 @@ import Logo from '../Logo/Logo'
 import ButtonIcon from '../ButtonIcon/ButtonIcon'
 import NavigationItems from './NavigationItems'
 
-export default () => (
+export default ({ onMenu }) => (
     <header className='NavigationBar'>
 
         <div className='erer__container'>
@@ -24,7 +24,9 @@ export default () => (
             <div className='NavigationBar__nav'>
 
                 <div className='NavigationBar__mobile'>
-                    <ButtonIcon icon={ faAlignJustify } />
+
+                    <ButtonIcon icon={ faAlignJustify } onClick= { onMenu } />
+
                 </div>
 
                 <NavLink exact to='/'>

@@ -2,13 +2,10 @@ import React from 'react'
 
 import './ButtonIcon.scss'
 
-import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default ({ icon }) => (
-    <div className='ButtonIcon'>
-    <NavLink exact to='#'>
+export default ({ icon, onClick }) => (
+    <div className='ButtonIcon' onClick={ onClick }>
         <FontAwesomeIcon icon={ icon } />
-    </NavLink>
-</div>
+    </div>
 )

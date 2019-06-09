@@ -1,0 +1,35 @@
+.MobileMenu {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 50%;
+
+    background-color: #fff;
+
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+
+    &.MobileMenu__Open {
+        transform: translateY(0);
+    }
+
+    &.MobileMenu__Close {
+        transform: translateY(-100%);
+    } 
+
+}
+
+@media (min-width: 768px) {
+
+    .MobileMenu {
+
+        display: none;
+
+    }
+
+}
