@@ -5,7 +5,8 @@ import './NavigationBar.scss'
 import { NavLink } from 'react-router-dom'
 import { faShoppingCart, faAlignJustify } from '@fortawesome/free-solid-svg-icons'
 
-import ButtonIcon from '../../components/ButtonIcon/ButtonIcon'
+import Logo from '../Logo/Logo'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
 import NavigationItems from './NavigationItems'
 
 export default () => (
@@ -27,7 +28,7 @@ export default () => (
                 </div>
 
                 <NavLink exact to='/'>
-                    Title
+                    <Logo />
                 </NavLink>
 
                 <nav>
