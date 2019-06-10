@@ -16,9 +16,9 @@ export default ({ id, name, price }) => (
 
             <SelectQuantity name='Quantity' />
 
-            <button className='Item__btn erer__btn erer__btn-black'>카트 담기</button>
-
         </form>
+
+        <button className='Item__btn erer__btn erer__btn-black'>카트 담기</button>
 
     </div>
 )

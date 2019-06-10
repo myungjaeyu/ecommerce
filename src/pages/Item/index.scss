@@ -21,16 +21,37 @@
 
         form {
 
-            p,
-            .Item__btn {
-                margin-top: 2rem;
-            }
-
             p {
+                margin-top: 2rem;
                 margin-bottom: 0.5rem;
             }
 
         }
+
+        .Item__btn {
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .Item__btn {
+    
+                position: fixed;
+
+                width: 100%;
+    
+                bottom: 0;
+                left: 0;
+
+                &:hover,
+                &:active {
+                    color: #fff;
+                    background-color: #232323;
+                }
+    
+            }
+        
+        }        
 
     }
 
