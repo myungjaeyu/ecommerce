@@ -1,5 +1,14 @@
 .NavigationBar {
 
+    position: fixed;
+
+    width: 100%;
+
+    background-color: #fff;
+    box-shadow: 0 .5px 1px #ccc;
+
+    z-index: 2;
+
     .erer__container {
 
         a {

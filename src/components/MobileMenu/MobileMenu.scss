@@ -2,6 +2,8 @@
 
     position: fixed;
 
+    padding-top: 60px;
+
     top: 0;
     left: 0;
     z-index: 1;
@@ -10,6 +12,7 @@
     height: 50%;
 
     background-color: #fff;
+    box-shadow: 0 .5px 1px #ccc;
 
     box-sizing: border-box;
     transition: transform 0.3s ease-out;

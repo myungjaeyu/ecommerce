@@ -39,11 +39,11 @@ export default class extends Component {
                     onClosed={ this.handleClosed }
                 />
 
-                <div className='Layout'>
+                <main className='Layout'>
 
                     { children }
 
-                </div>
+                </main>
 
                 <Footer />
 
