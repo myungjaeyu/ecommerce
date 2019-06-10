@@ -23,7 +23,7 @@
 
     .SelectPopover__popover {
 
-        animation: fadeIn .5s ease 0s 1 normal backwards;
+        transition: all 0.5s ease;
 
         width: 270px;
 
@@ -50,27 +50,12 @@
 
         }
 
-    }
-
-    @keyframes fadeIn {
-
-        0% {
-            opacity: 0;
-        }
-        100% {
+        &.SelectPopover__Open {
             opacity: 1;
         }
 
-    }
-
-    @keyframes fadeInDown {
-
-        0% {
-            bottom: -100%;
-        }
-
-        100% {
-            bottom: 0;
+        &.SelectPopover__Close {
+            opacity: 0;
         }
 
     }
@@ -91,7 +76,15 @@
             left: 0;
             top: auto;
 
-            animation: fadeInDown .2s ease 0s 1 normal backwards;
+            transition-duration: 0.2s;
+
+            &.SelectPopover__Open {
+                transform: translateY(0);
+            }
+    
+            &.SelectPopover__Close {
+                transform: translateY(100%);
+            }
 
         }
 
