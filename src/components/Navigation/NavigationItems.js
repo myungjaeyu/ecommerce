@@ -3,13 +3,17 @@ import React from 'react'
 import NavigationItem from './NavigationItem'
 
 export default () => (
-    <ul className='NavigationItems'>
+    <ul>
 
-        <NavigationItem>Item1</NavigationItem>
+        <NavigationItem to='/list'>MENU1</NavigationItem>
 
-        <NavigationItem>Item2</NavigationItem>
+        <NavigationItem to='/list'>MENU2</NavigationItem>
 
-        <NavigationItem>Item3</NavigationItem>
+        <NavigationItem to='/list'>MENU3</NavigationItem>
+
+        <NavigationItem to='/list'>MENU4</NavigationItem>
+
+        <NavigationItem to='/list'>MENU5</NavigationItem>
 
     </ul>
 )

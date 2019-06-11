@@ -10,13 +10,13 @@ export default ({ id, name, price }) => (
 
         <p className='ItemForm__price'>₩{ price }</p>
 
-        <form>
+        <div className='ItemForm__form'>
 
             <SelectOption name='Type' options={[ 'A', 'B', 'C' ]}/>
 
             <SelectQuantity name='Quantity' />
 
-        </form>
+        </div>
 
         <button className='Item__btn erer__btn erer__btn-black'>카트 담기</button>
 
