@@ -1,0 +1,149 @@
+.CartSideBar {
+
+    position: fixed;
+    box-sizing: border-box;
+
+    padding-top: 85px;
+
+    top: 0;
+    left: 100%;
+    z-index: 1;
+
+    width: 300px;
+    height: 100%;
+
+    background-color: #fff;
+    box-shadow: 0 .5px 1px #ccc;
+
+    transition: transform 0.3s ease-out;
+
+    &.CartSideBar__Open {
+        transform: translateX(-100%);
+    }
+
+    &.CartSideBar__Close {
+        transform: translateX(0);
+    }
+    
+    a {
+        color: #232323;
+        text-decoration: none;
+    }
+
+    nav {
+
+        height: 90%;
+
+        ul {
+
+            overflow: scroll;
+
+            height: 100%;
+
+            margin: 0;
+            padding: 0;
+
+            padding-top: 1rem;
+        
+            list-style: none;
+
+            li {
+
+                position: relative;
+
+                display: flex;
+                flex-wrap: wrap;
+
+                padding: .5rem 0;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.02)
+                }
+
+                h4, h5, svg {
+                    padding: 0;
+                    margin: 0;
+
+                    font-weight: normal;
+
+                }
+
+                .CartItem__image {
+
+                    width: 35%;
+
+                    img {
+                        width: 100%;
+                    }
+
+                }
+
+                .CartItem__content {
+
+                    width: 65%;
+
+                    h4 {
+                        padding-right: 10%;
+                        display: inline;
+                    }
+                    
+                }
+
+                svg {
+                    position: absolute;
+
+                    bottom : 1.8rem;
+                    left: 90%;
+
+                    color: #ccc;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .CartSideBar__footer {
+
+        position: absolute;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        bottom: 0;
+
+        background-color: #fff;
+        border-top: .1px solid #ccc;
+
+        h3 {
+            font-weight: normal;
+            letter-spacing: .5px;
+
+            padding-left: 1rem;
+        }
+
+        a {
+            margin : .5rem;
+            margin-right: 1rem;
+
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .CartSideBar {
+
+        padding-top: 60px;
+
+    }
+
+}

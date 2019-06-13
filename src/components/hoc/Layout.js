@@ -6,24 +6,21 @@ import NavigationBar from '../Navigation/NavigationBar'
 import Footer from '../Footer/Footer'
 
 import MobileMenu from '../MobileMenu/MobileMenu'
+import CartSideBar from '../CartSideBar/CartSideBar'
 
 export default class extends Component {
 
     state = { 
-        showMenu : false 
+        showMenu : false, 
+        showCart : false
     }
 
-    handleClosed = () => {
+    handleClosedMenu = () => this.setState(() => ({ showMenu : false }))
+    handleMenu = () => this.setState(({ showMenu }) => ({ showMenu : !showMenu }))
 
-        this.setState(() => ({ showMenu : false }))
+    handleClosedCart = () => this.setState(() => ({ showCart : false }))
+    handleCart = () => this.setState(({ showCart }) => ({ showCart : !showCart }))
 
-    }
-
-    handleMenu = () => {
-
-        this.setState(({ showMenu }) => ({ showMenu : !showMenu }))
-
-    }
 
     render() {
 
@@ -32,11 +29,16 @@ export default class extends Component {
         return (
             <Fragment>
 
-                <NavigationBar onMenu={ this.handleMenu }/>
+                <NavigationBar onMenu={ this.handleMenu } onCart={ this.handleCart }/>
 
                 <MobileMenu 
                     show={ this.state.showMenu }
-                    onClosed={ this.handleClosed }
+                    onClosed={ this.handleClosedMenu }
+                />
+
+                <CartSideBar
+                    show={ this.state.showCart }
+                    onClosed={ this.handleClosedCart }
                 />
 
                 <main className='Layout'>

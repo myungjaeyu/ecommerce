@@ -9,7 +9,7 @@ import Logo from '../Logo/Logo'
 import ButtonIcon from '../ButtonIcon/ButtonIcon'
 import NavigationItems from './NavigationItems'
 
-export default ({ onMenu }) => (
+export default ({ onMenu, onCart }) => (
     <header className='NavigationBar'>
 
         <div className='erer__container'>
@@ -43,7 +43,7 @@ export default ({ onMenu }) => (
 
                 </nav>
 
-                <ButtonIcon icon={ faShoppingCart } />
+                <ButtonIcon icon={ faShoppingCart } onClick= { onCart } />
 
             </div>
 
