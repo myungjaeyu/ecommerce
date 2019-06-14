@@ -1,0 +1,54 @@
+.Modal {
+
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+
+    transition: all 0.5s ease;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0,0,0, .5);
+    box-sizing: border-box;
+
+    &.Modal__Open {
+        opacity: 1;
+    }
+
+    &.Modal__Close {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .Modal__Wrapper {
+
+        position: absolute;
+
+        background-color: #fff;
+        box-sizing: border-box;
+
+        box-shadow: 0 1px 2px #fff;
+
+        padding: 3rem;
+
+        width: 80%;
+        height: 60%;
+    }
+
+    svg {
+        position: absolute;
+        color: #ccc;
+
+        top: 3%;
+        right: 3%;
+
+        font-size: 2rem;
+
+    }
+
+}

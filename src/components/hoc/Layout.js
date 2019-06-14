@@ -8,11 +8,14 @@ import Footer from '../Footer/Footer'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import CartSideBar from '../CartSideBar/CartSideBar'
 
+import Modal from '../Modal/Modal'
+
 export default class extends Component {
 
     state = { 
         showMenu : false, 
-        showCart : false
+        showCart : false,
+        showModal : true
     }
 
     handleClosedMenu = () => this.setState(() => ({ showMenu : false }))
@@ -21,6 +24,7 @@ export default class extends Component {
     handleClosedCart = () => this.setState(() => ({ showCart : false }))
     handleCart = () => this.setState(({ showCart }) => ({ showCart : !showCart }))
 
+    handleCloseModal = () => this.setState(() => ({ showModal : false }))
 
     render() {
 
@@ -39,6 +43,20 @@ export default class extends Component {
                 <CartSideBar
                     show={ this.state.showCart }
                     onClosed={ this.handleClosedCart }
+                />
+
+                <Modal 
+                    show={ this.state.showModal }
+                    onClosed={ this.handleCloseModal }
+                    modal={
+                        { 
+                            type : 'notice',
+                            options : {
+                                header : 'Modal Header',
+                                content : 'Modal Test Modal Test Modal Test Modal Test Modal Test Modal Test'
+                            }
+                        }
+                    }
                 />
 
                 <main className='Layout'>
