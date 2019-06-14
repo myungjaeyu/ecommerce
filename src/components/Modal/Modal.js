@@ -7,6 +7,8 @@ import ModalNotice from './internal/ModalNotice'
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
+import Spinner from '../Spinner/Spinner'
+
 export default ({ show, onClosed, modal }) => {
 
     const IS_SHOW_CLASSNAME = show ? 'Modal__Open' : 'Modal__Close'
@@ -28,6 +30,8 @@ export default ({ show, onClosed, modal }) => {
                 { handleModal(modal.type)(modal.options) }
 
                 <ButtonIcon icon={ faTimes } onClick={ onClosed }/>
+
+                <Spinner />
 
             </div>
 
