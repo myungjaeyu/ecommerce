@@ -13,9 +13,26 @@ import Modal from '../Modal/Modal'
 export default class extends Component {
 
     state = { 
+        showNavigationTransparent : false,
         showMenu : false, 
         showCart : false,
         showModal : true
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll)
+    }
+
+    componentWillMount() {
+        window.removeEventListener('scroll', this.handleScroll)
+    }
+
+    handleScroll = () => {
+        this.handleFlagNavigationTransparent(100 < window.scrollY)
+    }
+
+    handleFlagNavigationTransparent = (bool) => {
+        this.state.showNavigationTransparent !== bool && this.setState(() => ({ showNavigationTransparent : bool }))
     }
 
     handleClosedMenu = () => this.setState(() => ({ showMenu : false }))
@@ -24,7 +41,7 @@ export default class extends Component {
     handleClosedCart = () => this.setState(() => ({ showCart : false }))
     handleCart = () => this.setState(({ showCart }) => ({ showCart : !showCart }))
 
-    handleCloseModal = () => this.setState(() => ({ showModal : false }))
+    handleClosedModal = () => this.setState(() => ({ showModal : false }))
 
     render() {
 
@@ -33,7 +50,11 @@ export default class extends Component {
         return (
             <Fragment>
 
-                <NavigationBar onMenu={ this.handleMenu } onCart={ this.handleCart }/>
+                <NavigationBar 
+                    transparent={ this.state.showNavigationTransparent }
+                    onMenu={ this.handleMenu }
+                    onCart={ this.handleCart }
+                />
 
                 <MobileMenu 
                     show={ this.state.showMenu }
@@ -47,7 +68,7 @@ export default class extends Component {
 
                 <Modal 
                     show={ this.state.showModal }
-                    onClosed={ this.handleCloseModal }
+                    onClosed={ this.handleClosedModal }
                     modal={
                         { 
                             type : 'notice',
@@ -59,7 +80,7 @@ export default class extends Component {
                     }
                 />
 
-                <main className='Layout'>
+                <main className='Layout' onScroll={ this.handleScroll }>
 
                     { children }
 
