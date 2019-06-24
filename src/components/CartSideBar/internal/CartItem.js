@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { NavLink } from 'react-router-dom'
+import NavLink from '../../NavLink/NavLink'
 
 import ButtonIcon from '../../ButtonIcon/ButtonIcon'
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
-export default ({ id, price, image, children }) => (
-    <NavLink exact to={ '/item/' + id }> 
+export default ({ id, price, image, children, onClosed }) => (
+    <NavLink exact to={ '/item/' + id } onClick={ onClosed }> 
         <li>
 
             <div className='CartItem__image'>
