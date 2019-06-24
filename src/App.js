@@ -12,6 +12,31 @@ import { Subscribe } from 'unstated'
 import { AppContainer } from './providers/containers'
 
 class App extends Component {
+
+    state = {
+        isMobileSize : false
+    }
+
+    componentDidMount() {
+        this.handleResize()
+
+        window.addEventListener('resize', this.handleResize)
+
+    }
+
+    componentWillMount() {
+        window.removeEventListener('resize', this.handleResize)
+    }
+
+    handleResize = () => {
+
+        window.innerWidth < 768 ? 
+        !this.state.isMobileSize && this.setState(() => ({ isMobileSize : true })) 
+        : 
+        this.state.isMobileSize && this.setState(() => ({ isMobileSize : false }))
+
+    }
+    
     render() {
         return (
             <Subscribe to={[ AppContainer ]}>
@@ -23,7 +48,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path='/' component={ Main } />
                             <Route exact path='/list' component={ List } />
-                            <Route exact path='/item/:id' component={ Item } />
+                            <Route exact path='/item/:id' render={ (props) => <Item { ...props } isMobileSize={ this.state.isMobileSize } /> } />
                             <Redirect to='/'/>
                         </Switch>
 
