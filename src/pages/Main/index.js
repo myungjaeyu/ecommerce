@@ -4,7 +4,8 @@ import './index.scss'
 
 import MainContent from './internal/Section/MainContent'
 import MainSubContent from './internal/Section/MainSubContent'
-import MainFeatures from './internal/Section/MainFeatures'
+
+import List from '../List'
 
 export default class extends Component {
     render() {
@@ -13,7 +14,8 @@ export default class extends Component {
 
                 <MainContent />
                 <MainSubContent />
-                <MainFeatures />
+
+                <List hideHeader={ true } hideMenu={ true } />
 
             </div>
         )
