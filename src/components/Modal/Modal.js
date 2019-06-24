@@ -25,7 +25,7 @@ export default ({ show, onClosed, modal }) => {
     return (
         <div className={ 'Modal ' + IS_SHOW_CLASSNAME } onClick={ onClosed }>
 
-            <div className='Modal__Wrapper'>
+            <div className='Modal__Wrapper' onClick={ (e) => e.stopPropagation() }>
 
                 { handleModal(modal.type)(modal.options) }
 
