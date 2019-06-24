@@ -28,14 +28,14 @@
 
         }
 
-        .Item__btn {
-            margin-top: 2rem;
+        .ItemForm__node {
+            margin-bottom: 2rem;
         }
 
         @media (max-width: 768px) {
 
-            .Item__btn {
-    
+            .ItemForm__form__wrapper {
+
                 position: fixed;
 
                 width: 100%;
@@ -43,12 +43,38 @@
                 bottom: 0;
                 left: 0;
 
-                &:hover,
-                &:active {
-                    color: #fff;
-                    background-color: #232323;
+                background: rgba(0, 0, 0, 0.5);
+
+                .ItemForm__form {
+
+                    border-top: 1px solid rgba(0, 0, 0, 0.3);
+                    background: #fff;
+
+                    position: fixed;
+
+                    width: 100%;
+        
+                    bottom: 0;
+                    left: 0;
+
+                    .ItemForm__node {
+
+                    }
+
+                    .ItemForm__btn {
+
+                        font-size: 1rem;
+
+                        &:hover,
+                        &:active {
+                            color: #fff;
+                            background-color: #232323;
+                        }
+
+                    }
+        
                 }
-    
+
             }
         
         }        

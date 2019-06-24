@@ -6,9 +6,18 @@ import ItemImage from './internal/ItemImage'
 import ItemForm from './internal/ItemForm'
 
 export default class extends Component {
+
+    state = {
+        showFormNode : false
+    }
+
+    handleFormNode = () => this.setState(({ showFormNode }) => ({ showFormNode : !showFormNode }))
+    handlePushCart = () => console.log('handlePushCart - ', this.props.match.params)
+
     render() {
 
         const { id } = this.props.match.params
+        const { isMobileSize } = this.props
 
         return (
             <div className='Item'>
@@ -30,6 +39,9 @@ export default class extends Component {
                                 id={ id }
                                 name='SWAGGER 왁스 스웨거 헤어 스터너 왁스 - 크리미&소프트'
                                 price='15,000'
+                                showFormNode={ !isMobileSize || this.state.showFormNode }
+                                onShow={ this.handleFormNode }
+                                onPush={ this.handlePushCart }
                             />
 
                         </div>
