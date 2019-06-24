@@ -1,3 +1,15 @@
 .Layout {
 
+    .Layout__notice__pad {
+        height: 90px;
+    }
+
+    @media (max-width: 768px) {
+
+        .Layout__notice__pad {
+            height: 65px;
+        }
+
+    }
+
 }

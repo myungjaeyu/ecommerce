@@ -1,0 +1,41 @@
+.NoticeBar {
+
+    position: relative;
+
+    width: 100%;
+
+    z-index: 3;
+
+    top:0;
+    left:0;
+
+    height: 90px;
+
+    background-color: #fff;
+
+    svg {
+
+        position: absolute;
+
+        color: #ccc;
+
+        top: 25%;
+        right: 3%;
+
+        font-size: 2rem;
+
+    }
+
+    &.NoticeBar__Close {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .NoticeBar {
+        height: 65px;
+    }
+
+}

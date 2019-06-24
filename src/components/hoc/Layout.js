@@ -5,6 +5,7 @@ import './Layout.scss'
 import NavigationBar from '../Navigation/NavigationBar'
 import Footer from '../Footer/Footer'
 
+import NoticeBar from '../NoticeBar/NoticeBar'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import CartSideBar from '../CartSideBar/CartSideBar'
 
@@ -16,7 +17,9 @@ export default class extends Component {
         showNavigationTransparent : false,
         showMenu : false, 
         showCart : false,
-        showModal : true
+        showModal : true,
+        hideNotice : false,
+        closedNotice : false
     }
 
     componentDidMount() {
@@ -36,12 +39,21 @@ export default class extends Component {
     }
 
     handleClosedMenu = () => this.setState(() => ({ showMenu : false }))
-    handleMenu = () => this.setState(({ showMenu }) => ({ showMenu : !showMenu }))
+    handleMenu = () => {
+        this.handleNotice()
+        this.setState(({ showMenu }) => ({ showMenu : !showMenu }))
+    }
 
     handleClosedCart = () => this.setState(() => ({ showCart : false }))
-    handleCart = () => this.setState(({ showCart }) => ({ showCart : !showCart }))
+    handleCart = () => {
+        this.handleNotice()
+        this.setState(({ showCart }) => ({ showCart : !showCart }))
+    }
 
     handleClosedModal = () => this.setState(() => ({ showModal : false }))
+
+    handleNotice = () => !this.state.closedNotice && this.setState(({ hideNotice }) => ({ hideNotice : !hideNotice }))
+    handleClosedNotice = () => this.setState(() => ({ closedNotice : true, hideNotice : true }))
 
     render() {
 
@@ -54,7 +66,13 @@ export default class extends Component {
                     transparent={ this.state.showNavigationTransparent }
                     onMenu={ this.handleMenu }
                     onCart={ this.handleCart }
-                />
+                >
+                    <NoticeBar 
+                        hide={ this.state.hideNotice } 
+                        onClosed={ this.handleClosedNotice }
+                        image=''/>
+
+                </NavigationBar>
 
                 <MobileMenu 
                     show={ this.state.showMenu }
@@ -80,7 +98,9 @@ export default class extends Component {
                     }
                 />
 
-                <main className='Layout' onScroll={ this.handleScroll }>
+                <main className='Layout'>
+
+                    { !this.state.hideNotice && <div className='Layout__notice__pad'></div> }
 
                     { children }
 

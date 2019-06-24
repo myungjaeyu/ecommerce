@@ -9,8 +9,10 @@ import Logo from '../Logo/Logo'
 import ButtonIcon from '../ButtonIcon/ButtonIcon'
 import NavigationItems from './NavigationItems'
 
-export default ({ transparent, onMenu, onCart }) => (
+export default ({ transparent, onMenu, onCart, children }) => (
     <header className={ `NavigationBar ${ transparent ? 'NavigationBar__Transparent' : ''}` }>
+
+        { children }
 
         <div className='erer__container'>
 
