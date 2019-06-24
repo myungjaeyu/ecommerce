@@ -22,32 +22,6 @@
             text-decoration: none;
         }
 
-        .NavigationBar__auth {
-
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-            width: 100%;
-
-            margin-top: 10px;
-
-            a {
-
-                font-size: .8rem;
-                letter-spacing: 2px;
-
-                margin-left: 10px;
-                padding-left: 10px;
-                
-                &:hover {
-                    background-color: rgba(0, 0, 0, .04);
-                }
-
-            }
-
-        }
-
         .NavigationBar__nav {
 
             display: flex;
@@ -91,6 +65,19 @@
 
         }
 
+        .NavigationBar__Icon {
+
+            div {
+                display: inline;
+
+                svg {
+                    margin-left: 20px;
+                }
+
+            }
+
+        }
+
 
         @media (max-width: 768px) {
 
@@ -98,9 +85,15 @@
                 display: none;
             }
 
+            .NavigationBar__logo {
+                margin-left: 75px;
+            }
+
         }
 
         @media (min-width: 768px) {
+
+            padding-top: 1.4rem;
 
             .NavigationBar__mobile {
                 display: none;

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './index.scss'
 
 import Center from '../../components/Center/Center'
+import NavLink from '../../components/NavLink/NavLink'
 
 export default class extends Component {
     render() {
@@ -34,6 +35,10 @@ export default class extends Component {
                         </label>
 
                         <button className='erer__btn erer__btn-black'>로그인하기</button>
+
+                        <NavLink exact to='/signup'>
+                            <span className='erer__text-sub'>회원가입 하러 가기</span>
+                        </NavLink>
 
                     </div>
 
