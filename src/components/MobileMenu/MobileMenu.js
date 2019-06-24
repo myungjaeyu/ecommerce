@@ -2,7 +2,7 @@ import React from 'react'
 
 import './MobileMenu.scss'
 
-import { NavLink } from 'react-router-dom'
+import NavLink from '../NavLink/NavLink'
 
 import NavigationItems from '../Navigation/NavigationItems'
 

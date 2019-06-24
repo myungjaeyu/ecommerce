@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavLink } from 'react-router-dom'
+import NavLink from '../NavLink/NavLink'
 
 export default ({ to, children }) => (
     <NavLink exact to={ to }> 

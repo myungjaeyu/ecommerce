@@ -2,7 +2,7 @@ import React from 'react'
 
 import './NavigationBar.scss'
 
-import { NavLink } from 'react-router-dom'
+import NavLink from '../NavLink/NavLink'
 import { faShoppingCart, faAlignJustify } from '@fortawesome/free-solid-svg-icons'
 
 import Logo from '../Logo/Logo'

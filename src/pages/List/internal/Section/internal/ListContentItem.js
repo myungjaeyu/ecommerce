@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavLink } from 'react-router-dom'
+import NavLink from '../../../../../components/NavLink/NavLink'
 
 export default ({ id, image, name, price }) => (
     <div className='ListContentItem erer__col-3'>
