@@ -4,6 +4,9 @@ import './index.scss'
 
 import ItemImage from './internal/ItemImage'
 import ItemForm from './internal/ItemForm'
+import ItemContent from './internal/ItemContent'
+
+import List from '../List'
 
 export default class extends Component {
 
@@ -23,7 +26,7 @@ export default class extends Component {
             <div className='Item'>
                 <div className='erer__container'>
 
-                    <div className='erer__row'>
+                    <div className='Item__header erer__row'>
 
                         <div className='erer__col-7'>
 
@@ -49,6 +52,43 @@ export default class extends Component {
                     </div>
 
                 </div>
+
+                <ItemContent data={
+                    [
+                        {
+                            image : 'http://www.inthe-uni.com/web/product/medium/201712/989_shop1_728089.jpg',
+                            title : '선택 상품에 대한 물품 상세 설명입니다!',
+                            description : `선택 상품 물품 상세 설명입니다! 선택 상품 물품 상세 설명입니다!\n이곳은 테스트 선택 상품 물품 상세 설명 내용 구간입니다.\n물품에 대한 세부적인 설명을 남길 수 있는 단락이죠.`
+                        },
+                        {
+                            image : 'http://via.placeholder.com/700x800',
+                            title : '선택 상품에 대한 물품 상세 설명입니다!',
+                            description : `선택 상품 물품 상세 설명입니다! 선택 상품 물품 상세 설명입니다!\n이곳은 테스트 선택 상품 물품 상세 설명 내용 구간입니다.\n물품에 대한 세부적인 설명을 남길 수 있는 단락이죠.`
+                        },
+                        {
+                            image : 'http://www.stylenanda.com/2017/3ce/180531-SIMPLY(3).jpg',
+                            title : '선택 상품에 대한 물품 상세 설명입니다!',
+                            description : `선택 상품 물품 상세 설명입니다! 선택 상품 물품 상세 설명입니다!\n이곳은 테스트 선택 상품 물품 상세 설명 내용 구간입니다.\n물품에 대한 세부적인 설명을 남길 수 있는 단락이죠.`
+                        },
+                        {
+                            image : 'http://www.stylenanda.com/2017/3ce/180531-VELVET(1).jpg',
+                            title : '선택 상품에 대한 물품 상세 설명입니다!',
+                            description : `선택 상품 물품 상세 설명입니다! 선택 상품 물품 상세 설명입니다!\n이곳은 테스트 선택 상품 물품 상세 설명 내용 구간입니다.\n물품에 대한 세부적인 설명을 남길 수 있는 단락이죠.`
+                        },
+                        {
+                            image : 'http://www.stylenanda.com/2017/3ce/180531-SIMPLY(1).jpg',
+                            title : '선택 상품에 대한 물품 상세 설명입니다!',
+                            description : `선택 상품 물품 상세 설명입니다! 선택 상품 물품 상세 설명입니다!\n이곳은 테스트 선택 상품 물품 상세 설명 내용 구간입니다.\n물품에 대한 세부적인 설명을 남길 수 있는 단락이죠.`
+                        },
+                        {
+                            image : 'http://www.stylenanda.com/2017/3ce/180531-VELVET(3).jpg',
+                            title : '선택 상품에 대한 물품 상세 설명입니다!',
+                            description : `선택 상품 물품 상세 설명입니다! 선택 상품 물품 상세 설명입니다!\n이곳은 테스트 선택 상품 물품 상세 설명 내용 구간입니다.\n물품에 대한 세부적인 설명을 남길 수 있는 단락이죠.`
+                        }
+                    ]
+                }/>
+
+                <List hideHeader={ true } />
 
             </div>
         )

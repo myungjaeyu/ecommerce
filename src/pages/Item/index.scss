@@ -1,7 +1,13 @@
 .Item {
 
-    img {
+    .Item__header {
+        max-width: 1050px;
+        margin: auto;
+    }
+
+    .ItemImage {
         width: 100%;
+        max-width: 500px;
     }
 
     .ItemForm {
@@ -30,11 +36,62 @@
 
         .ItemForm__node {
             margin-bottom: 2rem;
+        }       
+
+    }
+
+    .ItemContent {
+
+        margin-top: 2rem;
+
+        .ItemContentItem {
+
+            .ItemContentItem__wrapper {
+
+                width: fit-content;
+                min-height: 400px;
+
+                margin: auto;
+                margin-bottom: 2rem;
+
+                img {
+                    width: 100%;
+                }
+
+                h1 {
+                    font-weight: 400;
+                    font-size: 1.7rem;
+                }
+
+                h3 {
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                    white-space: pre-line;
+                }
+
+            }
+
         }
 
-        @media (max-width: 768px) {
+    }
 
-            .ItemForm__form__wrapper {
+    @media (max-width: 768px) {
+
+        .ItemForm__form__wrapper {
+
+            position: fixed;
+
+            width: 100%;
+
+            bottom: 0;
+            left: 0;
+
+            background: rgba(0, 0, 0, 0.5);
+
+            .ItemForm__form {
+
+                border-top: 1px solid rgba(0, 0, 0, 0.3);
+                background: #fff;
 
                 position: fixed;
 
@@ -43,42 +100,26 @@
                 bottom: 0;
                 left: 0;
 
-                background: rgba(0, 0, 0, 0.5);
+                .ItemForm__node {
 
-                .ItemForm__form {
-
-                    border-top: 1px solid rgba(0, 0, 0, 0.3);
-                    background: #fff;
-
-                    position: fixed;
-
-                    width: 100%;
-        
-                    bottom: 0;
-                    left: 0;
-
-                    .ItemForm__node {
-
-                    }
-
-                    .ItemForm__btn {
-
-                        font-size: 1rem;
-
-                        &:hover,
-                        &:active {
-                            color: #fff;
-                            background-color: #232323;
-                        }
-
-                    }
-        
                 }
 
-            }
-        
-        }        
+                .ItemForm__btn {
 
+                    font-size: 1rem;
+
+                    &:hover,
+                    &:active {
+                        color: #fff;
+                        background-color: #232323;
+                    }
+
+                }
+    
+            }
+
+        }
+    
     }
 
 }

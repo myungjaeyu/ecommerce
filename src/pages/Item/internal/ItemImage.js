@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default ({ image }) => (
-    <img src={ image } alt='' />
+    <img className='ItemImage' src={ image } alt='' />
 )
