@@ -1,3 +1,38 @@
 .Login {
 
+    .Login__form {
+        width: 90%;
+        max-width: 300px;
+
+        margin-top: 2rem;
+
+        label {
+            display: block;
+        }
+
+        input, button {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            height: 38px;
+
+            border-radius: 2px;
+            border-width: 1px;
+            border-style: solid;
+
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.6);
+            outline: none;
+
+        }
+
+        span {
+            display: inline-block;
+            margin-bottom: .3rem;
+        }
+
+    }
+
 }
