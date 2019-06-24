@@ -8,11 +8,14 @@ import ListContent from './internal/Section/ListContent'
 
 export default class extends Component {
     render() {
+
+        const { hideHeader, hideMenu } = this.props
+
         return (
             <div className='List'>
 
-                <ListHedaer />
-                <ListContentMenu />
+                { !hideHeader && <ListHedaer /> }
+                { !hideMenu && <ListContentMenu /> }
                 <ListContent />
 
             </div>

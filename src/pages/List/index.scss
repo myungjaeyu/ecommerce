@@ -2,12 +2,10 @@
 
     .ListHeader {
 
-        text-align: center;
-        font-weight: normal;
+        height: 450px;
 
-        letter-spacing: 3px;
-
-        padding: 2rem 0;
+        background-color: #f7f7f7;
+        color: #ccc;
 
     }
 
@@ -44,12 +42,20 @@
 
         h5 {
             letter-spacing: 2px;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         p {
             text-align: center;
             margin-top: .5rem;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .ListHeader {
+            height: 400px;
         }
 
     }
