@@ -18,7 +18,7 @@
     .erer__container {
 
         a {
-            color : #232323;
+            color : #848484;
             text-decoration: none;
         }
 
@@ -37,8 +37,13 @@
                 font-size: .8rem;
                 letter-spacing: 2px;
 
-                margin-left: 20px;
+                margin-left: 10px;
+                padding-left: 10px;
                 
+                &:hover {
+                    background-color: rgba(0, 0, 0, .04);
+                }
+
             }
 
         }
@@ -67,21 +72,18 @@
                     li {
                         display: inline-block;
 
-                        margin: 20px;
+                        padding: 20px;
 
-                        color: #000;
+                        color: #848484;
 
                         border-bottom: 2px solid transparent;
 
                         &:hover {
-
-                            color: #848484;
-
-                            border-bottom: 2px solid #232323;
-
+                            background-color: rgba(0, 0, 0, .02);
                         }
 
                     }
+
 
                 }
 
