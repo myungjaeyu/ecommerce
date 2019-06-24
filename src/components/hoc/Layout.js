@@ -31,7 +31,7 @@ export default class extends Component {
     }
 
     handleScroll = () => {
-        this.handleFlagNavigationTransparent(100 < window.scrollY)
+        this.handleFlagNavigationTransparent(30 < window.scrollY)
     }
 
     handleFlagNavigationTransparent = (bool) => {
