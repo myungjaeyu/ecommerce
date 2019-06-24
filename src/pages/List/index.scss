@@ -30,9 +30,7 @@
         transition: all .3s ease;
 
         &:hover {
-            border-color: #ccc;
-
-            box-shadow: 0 2px 3px #ccc;
+            background-color: rgba(0,0,0, .03)
         }
 
         a {
@@ -46,6 +44,7 @@
 
         h5 {
             letter-spacing: 2px;
+            font-weight: 400;
         }
 
         p {

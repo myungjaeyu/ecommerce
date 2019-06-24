@@ -35,13 +35,9 @@ export default ({ transparent, onMenu, onCart, children }) => (
                     <Logo />
                 </NavLink>
 
-                <nav>
+                <nav className='NavigationBar__desktop'>
 
-                    <div className='NavigationBar__desktop'>
-
-                        <NavigationItems />
-
-                    </div>
+                    <NavigationItems />
 
                 </nav>
 

@@ -35,8 +35,7 @@
         color: #232323;
         text-align: center;
 
-        background-color: #f5f5f5;
-        border: 1px solid #f5f5f5;
+        background-color: #fff;
 
         box-shadow: 0 3px 5px #ccc;
 
@@ -44,8 +43,9 @@
 
             border: none;
 
-            &:active {
-                background-color: #fff;
+            &:active,
+            &:hover {
+                background-color: rgba(0,0,0, .03)
             }
 
         }
@@ -56,6 +56,7 @@
 
         &.SelectPopover__Close {
             opacity: 0;
+            z-index: -1;
         }
 
     }
