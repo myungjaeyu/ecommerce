@@ -8,6 +8,9 @@ import Main from './pages/Main'
 import List from './pages/List'
 import Item from './pages/Item'
 
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+
 import { Subscribe } from 'unstated'
 import { AppContainer } from './providers/containers'
 
@@ -49,6 +52,8 @@ class App extends Component {
                             <Route exact path='/' component={ Main } />
                             <Route exact path='/list' component={ List } />
                             <Route exact path='/item/:id' render={ (props) => <Item { ...props } isMobileSize={ this.state.isMobileSize } /> } />
+                            <Route exact path='/login' component={ Login } />
+                            <Route exact path='/signup' component={ Signup } />
                             <Redirect to='/'/>
                         </Switch>
 

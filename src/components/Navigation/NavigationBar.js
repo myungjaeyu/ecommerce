@@ -18,8 +18,8 @@ export default ({ transparent, onMenu, onCart, children }) => (
 
             <div className='NavigationBar__auth NavigationBar__desktop'>
 
-                <NavLink exact to='#'>Log in</NavLink>
-                <NavLink exact to='#'>Sign up</NavLink>
+                <NavLink exact to='/login'>Log in</NavLink>
+                <NavLink exact to='/signup'>Sign up</NavLink>
 
             </div>
 

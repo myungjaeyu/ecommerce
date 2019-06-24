@@ -21,9 +21,9 @@ export default ({ show, onClosed }) => {
 
             <div className='MobileMenu__footer'>
 
-                <NavLink exact to='#'>Log in</NavLink>
+                <NavLink exact to='/login'>Log in</NavLink>
 
-                <NavLink exact to='#'>Sign up</NavLink>
+                <NavLink exact to='/signup'>Sign up</NavLink>
 
             </div>
 
