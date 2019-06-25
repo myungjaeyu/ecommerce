@@ -58,6 +58,19 @@
             height: 400px;
         }
 
+        .ListContentItem {
+            width: 50%;   
+        }
+
     }
+
+    @media (min-width: 1304px) {
+
+        .ListContentItem {
+            width: 25%;
+        }
+
+    }
+
 
 }
