@@ -14,3 +14,8 @@ $ git subtree push --prefix build origin gh-pages
 
 $ git reset HEAD^
 ```
+
+#### Dependencies
+
+- [react-dom](https://www.npmjs.com/package/react-dom)
+- [sass](https://sass-lang.com)
