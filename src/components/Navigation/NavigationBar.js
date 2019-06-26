@@ -25,7 +25,7 @@ export default ({ transparent, onMenu, onCart, onLogin, children }) => (
                 </div>
 
                 <NavLink exact to='/' className='NavigationBar__logo'>
-                    <Logo />
+                    <Logo size='1.3rem' />
                 </NavLink>
 
                 <nav className='NavigationBar__desktop'>

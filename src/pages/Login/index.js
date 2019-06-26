@@ -5,6 +5,8 @@ import './index.scss'
 import Center from '../../components/Center/Center'
 import NavLink from '../../components/NavLink/NavLink'
 
+import Logo from '../../components/Logo/Logo'
+
 export default class extends Component {
     render() {
 
@@ -14,6 +16,8 @@ export default class extends Component {
                 <Center>
 
                     <div className='Login__form'>
+
+                        <Logo size='2.8rem' />
 
                         <span className='erer__text-sub'>소셜 계정으로 로그인</span>
 

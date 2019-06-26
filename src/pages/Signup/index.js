@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './index.scss'
 
 import Center from '../../components/Center/Center'
+import Logo from '../../components/Logo/Logo'
 
 export default class extends Component {
     render() {
@@ -13,6 +14,8 @@ export default class extends Component {
                 <Center>
 
                     <div className='Signup__form'>
+
+                        <Logo size='2.8rem' />
 
                         <label>
                             <span className='erer__text-sub'>이메일</span>

@@ -2,8 +2,8 @@ import React from 'react'
 
 import './Logo.scss'
 
-export default () => (
-    <div className='Logo'>
+export default ({ size }) => (
+    <div className='Logo' style={ { fontSize : size }}>
         TEST LOGO
     </div>
 )
