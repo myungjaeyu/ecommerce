@@ -5,17 +5,20 @@ import './index.scss'
 import ItemImage from './internal/ItemImage'
 import ItemForm from './internal/ItemForm'
 import ItemContent from './internal/ItemContent'
+import ItemReview from './internal/ItemReview'
 
 import List from '../List'
 
 export default class extends Component {
 
     state = {
-        showFormNode : false
+        showFormNode : false,
+        reviewFormRating : 5
     }
 
     handleFormNode = () => this.setState(({ showFormNode }) => ({ showFormNode : !showFormNode }))
     handlePushCart = () => console.log('handlePushCart - ', this.props.match.params)
+    handleRating = (_, rating) => this.setState({ reviewFormRating : rating })
 
     render() {
 
@@ -87,6 +90,25 @@ export default class extends Component {
                         }
                     ]
                 }/>
+
+                <ItemReview 
+                    data={ [
+                        {
+                            id : '1',
+                            name : 'Nicktest123',
+                            rating : 5,
+                            date : '2019-06-26',
+                            images : [
+                                'http://www.stylenanda.com/2017/upload2/jsp180524-109sooa(1).jpg',
+                                'http://www.stylenanda.com/2017/upload2/jsp180524-109sooa(4).jpg'
+
+                            ],
+                            content : `카레가 살짝매콤합니다~아이랑드시는분 참고하세요\n부드럽고 감칠맛나는 카레맛이 최근에 먹어본것중 최고였고\n고로케는 에어프라이기에 10분정도 돌려서 같이먹으니 바삭하고 너무나맛있었어요~재구매각입니다!!!`
+                        }
+                    ]}
+                    rating={ this.state.reviewFormRating }
+                    onRating={ this.handleRating }
+                />
 
                 <List hideHeader={ true } />
 
