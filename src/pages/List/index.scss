@@ -9,68 +9,12 @@
 
     }
 
-    .ListContentMenu__wrapper {
-
-        display: flex;
-        justify-content: space-between;
-
-        width: 100%;
-        border: 1px solid #ccc;
-
-        margin-bottom: 3rem;
-
-    }
-
-    .ListContentItem {
-
-        border: 1px solid transparent;
-
-        transition: all .3s ease;
-
-        &:hover {
-            background-color: rgba(0,0,0, .03)
-        }
-
-        a {
-            color: #848484;
-            text-decoration: none;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        h5 {
-            letter-spacing: 2px;
-            font-weight: 500;
-        }
-
-        p {
-            text-align: center;
-            margin-top: .5rem;
-        }
-
-    }
-
     @media (max-width: 768px) {
 
         .ListHeader {
             height: 400px;
         }
 
-        .ListContentItem {
-            width: 50%;   
-        }
-
     }
-
-    @media (min-width: 1304px) {
-
-        .ListContentItem {
-            width: 25%;
-        }
-
-    }
-
 
 }

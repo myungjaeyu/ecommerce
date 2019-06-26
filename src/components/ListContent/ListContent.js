@@ -1,6 +1,8 @@
 import React from 'react'
 
-import ListContentItem from './internal/ListContentItem'
+import './ListContent.scss'
+
+import ListContentItem from './ListContentItem'
 
 export default () => (
     <section className='ListContent'>

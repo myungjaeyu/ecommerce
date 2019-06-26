@@ -1,7 +1,9 @@
 import React from 'react'
 
-import SelectPopover from '../../../../components/SelectPopover/SelectPopover'
-import SelectButtons from '../../../../components/SelectButtons/SelectButtons'
+import './ListContentMenu.scss'
+
+import SelectPopover from '../SelectPopover/SelectPopover'
+import SelectButtons from '../SelectButtons/SelectButtons'
 
 export default () => (
     <section className='ListContentMenu'>
