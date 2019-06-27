@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
 import './App.scss'
 
-import Layout from './components/hoc/Layout'
-
 import Main from './pages/Main'
 import List from './pages/List'
 import Item from './pages/Item'
@@ -46,18 +44,14 @@ class App extends Component {
             { (app) => (
                 <div className='App'>
 
-                    <Layout>
-
-                        <Switch>
-                            <Route exact path='/' component={ Main } />
-                            <Route exact path='/list' component={ List } />
-                            <Route exact path='/item/:id' render={ (props) => <Item { ...props } isMobileSize={ this.state.isMobileSize } /> } />
-                            <Route exact path='/login' component={ Login } />
-                            <Route exact path='/signup' component={ Signup } />
-                            <Redirect to='/'/>
-                        </Switch>
-
-                    </Layout>
+                    <Switch>
+                        <Route exact path='/' component={ Main } />
+                        <Route exact path='/list' component={ List } />
+                        <Route exact path='/item/:id' render={ (props) => <Item { ...props } isMobileSize={ this.state.isMobileSize } /> } />
+                        <Route exact path='/login' component={ Login } />
+                        <Route exact path='/signup' component={ Signup } />
+                        <Redirect to='/'/>
+                    </Switch>
 
                 </div>
             ) }

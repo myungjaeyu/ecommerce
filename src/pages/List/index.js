@@ -2,23 +2,25 @@ import React, { Component } from 'react'
 
 import './index.scss'
 
-import ListHedaer from './internal/Section/ListHeader'
-import ListContentMenu from './internal/Section/ListContentMenu'
-import ListContent from './internal/Section/ListContent'
+import ListHedaer from './internal/ListHeader'
+import ListContentMenu from '../../components/ListContent/ListContentMenu'
+import ListContent from '../../components/ListContent/ListContent'
+
+import Layout from '../../components/hoc/Layout'
 
 export default class extends Component {
     render() {
 
-        const { hideHeader, hideMenu } = this.props
-
         return (
-            <div className='List'>
+            <Layout>
+                <div className='List'>
 
-                { !hideHeader && <ListHedaer /> }
-                { !hideMenu && <ListContentMenu /> }
-                <ListContent />
+                    { <ListHedaer /> }
+                    { <ListContentMenu /> }
+                    <ListContent />
 
-            </div>
+                </div>
+            </Layout>
         )
     }
 

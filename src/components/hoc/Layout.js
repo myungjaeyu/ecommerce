@@ -38,13 +38,19 @@ export default class extends Component {
         this.state.showNavigationTransparent !== bool && this.setState(() => ({ showNavigationTransparent : bool }))
     }
 
-    handleClosedMenu = () => this.setState(() => ({ showMenu : false }))
+    handleClosedMenu = () => {
+        this.handleNotice()
+        this.setState(() => ({ showMenu : false }))
+    }
     handleMenu = () => {
         this.handleNotice()
         this.setState(({ showMenu }) => ({ showMenu : !showMenu }))
     }
 
-    handleClosedCart = () => this.setState(() => ({ showCart : false }))
+    handleClosedCart = () => {
+        this.handleNotice()
+        this.setState(() => ({ showCart : false }))
+    }
     handleCart = () => {
         this.handleNotice()
         this.setState(({ showCart }) => ({ showCart : !showCart }))
@@ -57,7 +63,7 @@ export default class extends Component {
 
     render() {
 
-        const { children } = this.props
+        const { children, modal } = this.props
 
         return (
             <Fragment>
@@ -84,19 +90,11 @@ export default class extends Component {
                     onClosed={ this.handleClosedCart }
                 />
 
-                <Modal 
+                { modal && <Modal 
                     show={ this.state.showModal }
                     onClosed={ this.handleClosedModal }
-                    modal={
-                        { 
-                            type : 'notice',
-                            options : {
-                                header : 'Modal Header',
-                                content : 'Modal Test Modal Test Modal Test Modal Test Modal Test Modal Test'
-                            }
-                        }
-                    }
-                />
+                    modal={ modal }
+                /> }
 
                 <main className='Layout'>
 
